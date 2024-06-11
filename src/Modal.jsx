@@ -1,14 +1,9 @@
 import { useState } from "react";
 
-/* componentes del modal */
-import { ModalComponent, ModalBody, ModalFooter } from "@ussebastian/kitdigital-react/dist/uss-react.es.js";
-
-/* componentes adicionales */
+import { Modal } from "@ussebastian/kitdigital-react/dist/uss-react.es.js";
 import { Button } from "@ussebastian/kitdigital-react/dist/uss-react.es.js";
 
-
-
- const ModalExample=()=> {
+const ModalExample = () => {
   const [modalState, setModalState] = useState(false);
 
   const handlePress = () => {
@@ -26,16 +21,16 @@ import { Button } from "@ussebastian/kitdigital-react/dist/uss-react.es.js";
         <Button variant="secondary" onClick={handlePress}>
           Modal de ejemplo
         </Button>
-        <ModalComponent isOpen={modalState} setOpen={setModalState}>
-          <ModalBody iconVariant="success">
+        <Modal isOpen={modalState} setOpen={setModalState}>
+          <Modal.Body iconVariant="success">
             <h4>Lorem ipsum</h4>
             <p>
               Lectus magna fringilla urna, porttitor rhoncus dolor purus non
               enim praesent elementum facilisis leo, vel fringilla est
               ullamcorper eget nulla facilisi etiam dignissim diam quis
             </p>
-          </ModalBody>
-          <ModalFooter>
+          </Modal.Body>
+          <Modal.Footer>
             <Button
               variant="secondary"
               onClick={handlePress}
@@ -50,11 +45,11 @@ import { Button } from "@ussebastian/kitdigital-react/dist/uss-react.es.js";
             >
               Acción
             </Button>
-          </ModalFooter>
-        </ModalComponent>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
-}
+};
 
 export default ModalExample;
